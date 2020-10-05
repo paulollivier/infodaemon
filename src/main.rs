@@ -58,5 +58,7 @@ async fn main() {
         let info = SysInfo::new();
         warp::reply::json(&info)
     });
+    println!("Launching server...");
     warp::serve(info).run(([127, 0, 0, 1], 3030)).await;
+    println!("Quitting");
 }
